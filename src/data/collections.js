@@ -19,7 +19,7 @@ export const featuredCollections = [
     title: 'Silver Collection',
     description: 'Refined silver-tone gifting options.',
     image: '/images/collections/silver.svg',
-    to: '/shop?category=silver-set,silver-plate,german-silver-plate-small-8-inch,german-silver-plate-big-10-inch'
+    to: '/shop?category=silver-set,german-silver-plate-small-8-inch'
   },
   {
     title: 'Utility Gifts',

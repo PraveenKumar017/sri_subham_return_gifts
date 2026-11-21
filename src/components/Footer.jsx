@@ -10,8 +10,8 @@ export default function Footer() {
       <div className="container footer-grid">
         <div className="footer-brand">
           <div className="brand" style={{ color: 'var(--ivory)' }}>
-            <img src="/favicon.svg" alt="" width="44" height="44" />
-            <div>Sri Subham <small style={{ color: 'rgba(250,247,244,0.72)' }}>Memories that last forever</small></div>
+            <img src="/images/subham_return_gifts_logo.jpg" alt="Sri Subham Return Gifts" />
+            <div>Sri Subham <small style={{ color: 'rgba(250,247,244,.72)' }}>Memories that last forever</small></div>
           </div>
           <p>Thoughtfully curated return gifts for celebrations that deserve something special.</p>
           <div className="socials">

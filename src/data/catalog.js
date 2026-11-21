@@ -1,21 +1,19 @@
 export const WHATSAPP_NUMBER = '919999999999';
 
 export const categories = [
-  { id: 1, name: 'Jar Set – Everyday Use', slug: 'jar-set-everyday-use', description: 'Practical jar sets suited for daily kitchen use.', image: '/images/categories/jar-set.svg' },
-  { id: 2, name: 'Printed Pichwai Tin Box – 11 Inch', slug: 'printed-pichwai-tin-box-11-inch', description: 'Decorative tin boxes featuring Pichwai-inspired prints.', image: '/images/categories/pichwai-tin.svg' },
-  { id: 3, name: 'German Silver Plate – Small Size (8 Inch)', slug: 'german-silver-plate-small-8-inch', description: 'Compact German silver plates for elegant gifting.', image: '/images/categories/silver-plate-small.svg' },
-  { id: 4, name: 'German Silver Plate – Big Size (10 Inch)', slug: 'german-silver-plate-big-10-inch', description: 'Larger German silver plates for special occasions.', image: '/images/categories/silver-plate-big.svg' },
-  { id: 5, name: 'Silver Set', slug: 'silver-set', description: 'Coordinated silver-tone sets for memorable gifting.', image: '/images/categories/silver-set.svg' },
-  { id: 6, name: 'Stylish & Useful Hot Box', slug: 'stylish-useful-hot-box', description: 'Useful hot boxes with a refined, gift-ready look.', image: '/images/categories/hot-box.svg' },
-  { id: 7, name: 'Hot & Cold Flask Set', slug: 'hot-cold-flask-set', description: 'Flask sets designed for both hot and cold beverages.', image: '/images/categories/flask-set.svg' },
-  { id: 8, name: 'Undiyal (Piggy Box)', slug: 'undiyal-piggy-box', description: 'Traditional undiyal boxes for auspicious gifting.', image: '/images/categories/undiyal.svg' },
-  { id: 9, name: 'Cute Bottle Set', slug: 'cute-bottle-set', description: 'Charming bottle sets for everyday convenience.', image: '/images/categories/bottle-set.svg' },
-  { id: 10, name: 'Jewels Box', slug: 'jewels-box', description: 'Elegant boxes for storing jewellery and keepsakes.', image: '/images/categories/jewels-box.svg' },
-  { id: 11, name: 'Meenakari Plate', slug: 'meenakari-plate', description: 'Plates with traditional Meenakari-style detailing.', image: '/images/categories/meenakari-plate.svg' },
-  { id: 12, name: 'Designing Heart Box', slug: 'designing-heart-box', description: 'Heart-shaped gift boxes with decorative designs.', image: '/images/categories/heart-box.svg' },
-  { id: 13, name: 'All Functions Haldi Kumkum', slug: 'all-functions-haldi-kumkum', description: 'Haldi kumkum sets suitable for many celebrations.', image: '/images/categories/haldi-kumkum.svg' },
-  { id: 14, name: 'Silver Plate', slug: 'silver-plate', description: 'Classic silver-tone plates for return gifting.', image: '/images/categories/silver-plate.svg' },
-  { id: 15, name: 'Normal & Designing Bags', slug: 'normal-designing-bags', description: 'Gift bags in simple and decorative styles.', image: '/images/categories/bags.svg' }
+  { id: 1, name: 'Jar Set – Everyday Use', slug: 'jar-set-everyday-use', description: 'Practical jar sets suited for daily kitchen use.', image: '/images/categories/jar_set.png' },
+  { id: 2, name: 'Printed Pichwai Tin Box – 11 Inch', slug: 'printed-pichwai-tin-box-11-inch', description: 'Decorative tin boxes featuring Pichwai-inspired prints.', image: '/images/categories/pichwai_tin_box.png' },
+  { id: 3, name: 'German Silver Plate – Small Size (8 Inch)', slug: 'german-silver-plate-small-8-inch', description: 'Compact German silver plates for elegant gifting.', image: '/images/categories/silver_plate.png' },
+  { id: 5, name: 'Silver Set', slug: 'silver-set', description: 'Coordinated silver-tone sets for memorable gifting.', image: '/images/categories/silver_set.png' },
+  { id: 6, name: 'Stylish & Useful Hot Box', slug: 'stylish-useful-hot-box', description: 'Useful hot boxes with a refined, gift-ready look.', image: '/images/categories/stylish_hotbox.png' },
+  { id: 7, name: 'Hot & Cold Flask Set', slug: 'hot-cold-flask-set', description: 'Flask sets designed for both hot and cold beverages.', image: '/images/categories/flask_set.png' },
+  { id: 8, name: 'Undiyal (Piggy Box)', slug: 'undiyal-piggy-box', description: 'Traditional undiyal boxes for auspicious gifting.', image: '/images/categories/undiyal.png' },
+  { id: 9, name: 'Cute Bottle Set', slug: 'cute-bottle-set', description: 'Charming bottle sets for everyday convenience.', image: '/images/categories/cute_bottle.png' },
+  { id: 10, name: 'Jewels Box', slug: 'jewels-box', description: 'Elegant boxes for storing jewellery and keepsakes.', image: '/images/categories/undiyal.png' },
+  { id: 11, name: 'Meenakari Plate', slug: 'meenakari-plate', description: 'Plates with traditional Meenakari-style detailing.', image: '/images/categories/meenakari_plate.png' },
+  { id: 12, name: 'Designing Heart Box', slug: 'designing-heart-box', description: 'Heart-shaped gift boxes with decorative designs.', image: '/images/categories/pichwai_tin_box.png' },
+  { id: 13, name: 'All Functions Haldi Kumkum', slug: 'all-functions-haldi-kumkum', description: 'Haldi kumkum sets suitable for many celebrations.', image: '/images/categories/silver_set.png' },
+  { id: 15, name: 'Normal & Designing Bags', slug: 'normal-designing-bags', description: 'Gift bags in simple and decorative styles.', image: '/images/categories/pichwai_tin_box.png' }
 ];
 
 export const occasions = [
@@ -29,7 +27,22 @@ export const occasions = [
   { id: 8, name: 'Corporate Events', slug: 'corporate-events', image: '/images/occasions/corporate.svg' }
 ];
 
-const img = (name) => `/images/products/${name}.svg`;
+const realImages = {
+  'jar-set-everyday-use': '/images/categories/jar_set.png',
+  'printed-pichwai-tin-box-11-inch': '/images/categories/pichwai_tin_box.png',
+  'german-silver-plate-small-8-inch': '/images/categories/silver_plate.png',
+  'silver-set': '/images/categories/silver_set.png',
+  'stylish-useful-hot-box': '/images/categories/stylish_hotbox.png',
+  'hot-cold-flask-set': '/images/categories/flask_set.png',
+  'undiyal-piggy-box': '/images/categories/undiyal.png',
+  'cute-bottle-set': '/images/categories/cute_bottle.png',
+  'jewels-box': '/images/categories/undiyal.png',
+  'meenakari-plate': '/images/categories/meenakari_plate.png',
+  'designing-heart-box': '/images/categories/pichwai_tin_box.png',
+  'all-functions-haldi-kumkum': '/images/categories/silver_set.png',
+  'normal-designing-bags': '/images/categories/pichwai_tin_box.png'
+};
+const img = (name) => realImages[name.replace(/-2$/, '')] || `/images/products/${name}.svg`;
 const cat = (slug) => categories.find((c) => c.slug === slug);
 const occ = (...slugs) => slugs;
 
@@ -59,8 +72,7 @@ export const products = [
   makeProduct(202, 'printed-pichwai-tin-box-11-inch', '[Sample] Pichwai Peacock Tin Box', { price: null, size: '11 Inch', material: 'Tin' }),
   makeProduct(301, 'german-silver-plate-small-8-inch', '[Sample] Small German Silver Gift Plate', { price: 399, size: '8 Inch', material: 'German silver', occasions: occ('weddings', 'seemantham') }),
   makeProduct(302, 'german-silver-plate-small-8-inch', '[Sample] Etched Small Silver Plate', { price: null, size: '8 Inch', material: 'German silver' }),
-  makeProduct(401, 'german-silver-plate-big-10-inch', '[Sample] Grand German Silver Plate', { price: 549, size: '10 Inch', material: 'German silver', isFeatured: true, occasions: occ('weddings', 'engagements') }),
-  makeProduct(402, 'german-silver-plate-big-10-inch', '[Sample] Floral Border Silver Plate', { price: null, size: '10 Inch', material: 'German silver' }),
+ 
   makeProduct(501, 'silver-set', '[Sample] Classic Silver Gift Set', { price: 899, size: 'Gift set', material: 'Silver-tone', isFeatured: true, occasions: occ('weddings', 'baby-showers') }),
   makeProduct(502, 'silver-set', '[Sample] Traditional Silver Pooja Set', { price: null, size: 'Gift set', material: 'Silver-tone' }),
   makeProduct(601, 'stylish-useful-hot-box', '[Sample] Insulated Hot Box', { price: 699, size: 'Medium', material: 'Insulated steel', occasions: occ('housewarming', 'corporate-events') }),
@@ -79,8 +91,7 @@ export const products = [
   makeProduct(1202, 'designing-heart-box', '[Sample] Heart Gift Box - Gold Accent', { price: 319, size: 'Medium', material: 'Decorative box' }),
   makeProduct(1301, 'all-functions-haldi-kumkum', '[Sample] Haldi Kumkum Gift Pair', { price: 199, size: 'Compact', material: 'Decorative metal', isFeatured: true, occasions: occ('festivals', 'seemantham', 'weddings') }),
   makeProduct(1302, 'all-functions-haldi-kumkum', '[Sample] Festive Haldi Kumkum Set', { price: 249, size: 'Compact', material: 'Decorative metal' }),
-  makeProduct(1401, 'silver-plate', '[Sample] Classic Round Silver Plate', { price: 429, size: '9 Inch', material: 'Silver-tone', occasions: occ('weddings', 'housewarming') }),
-  makeProduct(1402, 'silver-plate', '[Sample] Border Design Silver Plate', { price: null, size: '9 Inch', material: 'Silver-tone' }),
+ 
   makeProduct(1501, 'normal-designing-bags', '[Sample] Festive Gift Bag Set', { price: 149, size: 'Assorted', material: 'Fabric/paper', occasions: occ('birthdays', 'corporate-events', 'festivals') }),
   makeProduct(1502, 'normal-designing-bags', '[Sample] Designer Return Gift Bags', { price: 199, size: 'Assorted', material: 'Fabric' })
 ];

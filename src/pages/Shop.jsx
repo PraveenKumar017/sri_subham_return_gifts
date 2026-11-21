@@ -1,7 +1,7 @@
 import { useEffect, useMemo, useRef, useState } from 'react';
 import { useSearchParams } from 'react-router-dom';
+import gsap from 'gsap';
 import usePageMeta from '../hooks/usePageMeta';
-import SectionHeading from '../components/SectionHeading';
 import ProductCard from '../components/ProductCard';
 import ProductModal from '../components/ProductModal';
 import { ProductSkeleton } from '../components/Skeleton';
@@ -19,6 +19,15 @@ export default function Shop({ addToCart }) {
   const [loading, setLoading] = useState(false);
   const [visibleCount, setVisibleCount] = useState(PAGE_SIZE);
   const searchRef = useRef(null);
+  const root = useRef(null);
+
+  useEffect(() => {
+    const reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    const ctx = gsap.context(() => {
+      gsap.from('.shop-hero h1, .shop-hero p', { opacity: 0, y: reduce ? 0 : 18, duration: reduce ? 0.01 : 0.6, stagger: 0.08, ease: 'power2.out' });
+    }, root);
+    return () => ctx.revert();
+  }, []);
 
   const selectedCategories = parseList(params.get('category'));
   const selectedOccasion = params.get('occasion') || '';
@@ -90,7 +99,7 @@ export default function Shop({ addToCart }) {
   const closeProduct = () => { const n = new URLSearchParams(params); n.delete('product'); setParams(n, { replace: true }); };
 
   return (
-    <main id="main-content">
+    <main id="main-content" ref={root}>
       <section className="shop-hero">
         <div className="container">
           <h1>Explore Our Gift Collections</h1>
