@@ -1,9 +1,9 @@
 ﻿import { useEffect, useState } from 'react';
 import { Link, NavLink, useLocation, useNavigate } from 'react-router-dom';
-import { Menu, Search, X, MessageCircle } from 'lucide-react';
+import { Menu, Search, X, MessageCircle, ShoppingBag } from 'lucide-react';
 import { generalEnquiry, hasWhatsAppNumber } from '../utils/whatsapp';
 
-export default function Header() {
+export default function Header({ cartCount = 0 }) {
   const [scrolled, setScrolled] = useState(false);
   const [open, setOpen] = useState(false);
   const [activeHash, setActiveHash] = useState('');
@@ -51,6 +51,10 @@ export default function Header() {
           </nav>
           <div className="header-actions">
             <button type="button" className="icon-btn" aria-label="Search products" onClick={goSearch}><Search size={20} /></button>
+            <button type="button" className="icon-btn cart-btn" aria-label={`Cart, ${cartCount} items`}>
+              <ShoppingBag size={20} />
+              {cartCount > 0 && <span className="cart-count">{cartCount}</span>}
+            </button>
             {hasWhatsAppNumber() && <a className="icon-btn" href={generalEnquiry()} target="_blank" rel="noopener noreferrer" aria-label="WhatsApp enquiry"><MessageCircle size={20} /></a>}
             <button type="button" className="icon-btn mobile-toggle" aria-label={open ? 'Close menu' : 'Open menu'} aria-expanded={open} onClick={() => setOpen((v) => !v)}>
               {open ? <X size={22} /> : <Menu size={22} />}

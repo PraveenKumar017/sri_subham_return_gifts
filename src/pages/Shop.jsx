@@ -11,7 +11,7 @@ const PAGE_SIZE = 12;
 
 const parseList = (v) => (v ? v.split(',').map((s) => s.trim()).filter(Boolean) : []);
 
-export default function Shop() {
+export default function Shop({ addToCart }) {
   usePageMeta('Shop Return Gifts | Sri Subham Return Gifts', 'Explore thoughtfully selected return gifts by category, occasion, and price.');
   const [params, setParams] = useSearchParams();
   const [search, setSearch] = useState(params.get('search') || '');
@@ -154,7 +154,7 @@ export default function Shop() {
           ) : filtered.length ? (
             <>
               <div className="products-grid">
-                {visible.map((p) => <ProductCard key={p.id} product={p} onView={openProduct} />)}
+                {visible.map((p) => <ProductCard key={p.id} product={p} onView={openProduct} onAddToCart={addToCart} />)}
               </div>
               {visibleCount < filtered.length && (
                 <div className="load-more-wrap">
@@ -172,7 +172,7 @@ export default function Shop() {
         </section>
       </div>
 
-      <ProductModal product={selectedProduct} onClose={closeProduct} />
+      <ProductModal product={selectedProduct} onClose={closeProduct} onAddToCart={addToCart} />
     </main>
   );
 }

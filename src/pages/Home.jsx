@@ -20,7 +20,7 @@ const whyItems = [
   { icon: PartyPopper, title: 'Memorable Celebrations', text: 'Return gifts designed to leave a warm, lasting impression.' }
 ];
 
-export default function Home() {
+export default function Home({ addToCart }) {
   usePageMeta('Sri Subham Return Gifts | Memories that last forever', 'Thoughtfully curated return gifts for weddings, engagements, birthdays, baby showers, festivals and special occasions.');
   const reduce = useReducedMotion();
   const [selected, setSelected] = useState(null);
@@ -99,7 +99,7 @@ export default function Home() {
             <SectionHeading eyebrow="Favourites" title="Customer Favourites" text="Popular gift choices selected for their charm and usefulness." center />
           </motion.div>
           <div className="products-grid">
-            {featured.map((p) => <ProductCard key={p.id} product={p} onView={setSelected} />)}
+            {featured.map((p) => <ProductCard key={p.id} product={p} onView={setSelected} onAddToCart={addToCart} />)}
           </div>
           <div style={{ textAlign: 'center', marginTop: 40 }}>
             <Link to="/shop" className="btn btn-secondary">View all products</Link>
@@ -157,7 +157,7 @@ export default function Home() {
         </div>
       </section>
 
-      <ProductModal product={selected} onClose={() => setSelected(null)} />
+      <ProductModal product={selected} onClose={() => setSelected(null)} onAddToCart={addToCart} />
     </main>
   );
 }

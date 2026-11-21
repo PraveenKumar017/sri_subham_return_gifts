@@ -2,7 +2,10 @@
   .products-grid, .category-grid, .occasion-grid { grid-template-columns: repeat(3, 1fr); }
   .feature-blocks { grid-template-columns: repeat(2, 1fr); }
   .footer-grid { grid-template-columns: repeat(2, 1fr); }
-  .shop-toolbar { grid-template-columns: 1fr 1fr 1fr; }
+  .shop-layout { grid-template-columns: 240px minmax(0,1fr); gap: 28px; }
+  .shop-toolbar { grid-template-columns: repeat(3, minmax(0,1fr)); }
+  .shop-toolbar .field:first-child { grid-column: span 3; }
+  .shop-toolbar .btn { grid-column: span 3; width: 100%; }
 }
 @media (max-width: 1024px) {
   :root { --pad-x: 24px; --section-y: 72px; }
@@ -21,10 +24,12 @@
   .hero-content { padding: 72px 0; }
   .collections-grid { grid-template-columns: 1fr 1fr; }
   .collection-card.large { grid-row: auto; min-height: 360px; }
-  .shop-layout { grid-template-columns: 1fr; gap: 24px; }
+  .shop-layout { grid-template-columns: 1fr; gap: 24px; padding: 40px 0 72px; }
   .shop-sidebar { display: none; }
   .chip-bar { display: flex; }
-  .filter-toggle { display: inline-flex; }
+  .shop-toolbar { grid-template-columns: repeat(2, minmax(0,1fr)); padding: 16px; }
+  .shop-toolbar .field:first-child { grid-column: span 2; }
+  .shop-toolbar .btn { grid-column: span 2; width: 100%; }
 }
 @media (max-width: 768px) {
   :root { --pad-x: 20px; --section-y: 64px; }
@@ -38,8 +43,9 @@
   .category-grid, .products-grid, .occasion-grid { grid-template-columns: repeat(2, 1fr); gap: 16px; }
   .collections-grid { grid-template-columns: 1fr; }
   .collection-card, .collection-card.large { min-height: 280px; }
+  .shop-hero { padding: 64px 0 56px; }
   .shop-toolbar { grid-template-columns: 1fr 1fr; }
-  .shop-toolbar .field:first-child { grid-column: span 2; }
+  .shop-toolbar .field:first-child, .shop-toolbar .btn { grid-column: span 2; }
   .modal-content { padding: 24px; }
   .detail-list div { grid-template-columns: 1fr; gap: 2px; }
   .footer-grid { grid-template-columns: 1fr; gap: 32px; }
@@ -52,9 +58,10 @@
   .hero-actions, .cta-actions { flex-direction: column; align-items: stretch; }
   .btn { width: 100%; }
   .card-actions { grid-template-columns: 1fr; }
-  .shop-toolbar { grid-template-columns: 1fr; }
-  .shop-toolbar .field:first-child { grid-column: auto; }
-  .products-grid, .category-grid { grid-template-columns: repeat(2, 1fr); }
+  .shop-layout { padding: 32px 0 56px; }
+  .shop-toolbar { grid-template-columns: 1fr; padding: 14px; gap: 10px; }
+  .shop-toolbar .field:first-child, .shop-toolbar .btn { grid-column: auto; }
+  .products-grid, .category-grid { grid-template-columns: repeat(2, 1fr); gap: 12px; }
   .product-body { padding: 14px; }
   .card-actions { padding: 0 14px 14px; }
   .modal-backdrop { padding: 10px; }

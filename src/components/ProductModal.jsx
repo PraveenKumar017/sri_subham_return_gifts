@@ -3,7 +3,7 @@ import { ChevronLeft, ChevronRight, X } from 'lucide-react';
 import { formatPrice, availabilityLabel } from '../utils/format';
 import { hasWhatsAppNumber, productEnquiry } from '../utils/whatsapp';
 
-export default function ProductModal({ product, onClose }) {
+export default function ProductModal({ product, onClose, onAddToCart }) {
   const [index, setIndex] = useState(0);
   const closeRef = useRef(null);
   const lastFocus = useRef(null);
@@ -68,7 +68,7 @@ export default function ProductModal({ product, onClose }) {
               {product.designs && <div><dt>Available designs</dt><dd>{product.designs}</dd></div>}
               <div><dt>Availability</dt><dd>{availabilityLabel(product.availability)}</dd></div>
             </dl>
-            {hasWhatsAppNumber() && <a className="btn btn-primary" href={productEnquiry(product.name)} target="_blank" rel="noopener noreferrer">Enquire on WhatsApp</a>}
+            <button type="button" className="btn btn-primary" onClick={() => { onAddToCart?.(product); onClose(); }}>Add to cart</button>
           </div>
         </div>
       </div>
