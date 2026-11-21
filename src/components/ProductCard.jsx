@@ -1,4 +1,4 @@
-import { formatPrice } from '../utils/format';
+﻿import { formatPrice } from '../utils/format';
 import { hasWhatsAppNumber, productEnquiry } from '../utils/whatsapp';
 
 export default function ProductCard({ product, onView }) {
@@ -22,3 +22,4 @@ export default function ProductCard({ product, onView }) {
     </article>
   );
 }
+

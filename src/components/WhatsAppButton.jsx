@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react';
+﻿import { useEffect, useState } from 'react';
 import { MessageCircle } from 'lucide-react';
 import { generalEnquiry, hasWhatsAppNumber } from '../utils/whatsapp';
 
@@ -17,3 +17,4 @@ export default function WhatsAppButton() {
     </a>
   );
 }
+

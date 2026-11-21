@@ -1,7 +1,6 @@
-import { useEffect, useState } from 'react';
+﻿import { useEffect, useState } from 'react';
 import { Link, NavLink, useLocation, useNavigate } from 'react-router-dom';
 import { Menu, Search, X, MessageCircle } from 'lucide-react';
-import AnnouncementBar from './AnnouncementBar';
 import { generalEnquiry, hasWhatsAppNumber } from '../utils/whatsapp';
 
 export default function Header() {
@@ -37,12 +36,11 @@ export default function Header() {
   const hashClass = (id) => `nav-link ${isHome && activeHash === id ? 'active' : ''}`;
 
   return (
-    <>
-      <AnnouncementBar />
+    <div className={`site-top ${solid ? 'solid' : 'transparent'} ${isHome ? 'home' : ''}`.trim()}>
       <header className={`site-header ${solid ? 'solid' : 'transparent'}`}>
         <div className="container header-inner">
           <Link className="brand" to="/" aria-label="Sri Subham Return Gifts home">
-            <img src="/favicon.svg" alt="Sri Subham Return Gifts" width="44" height="44" />
+            <img src="/images/subham_return_gifts_logo.png" alt="Sri Subham Return Gifts" />
             <div>Sri Subham <small>Memories that last forever</small></div>
           </Link>
           <nav className="nav-desktop" aria-label="Primary">
@@ -70,6 +68,7 @@ export default function Header() {
           </div>
         )}
       </header>
-    </>
+    </div>
   );
 }
+

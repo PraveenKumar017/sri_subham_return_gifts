@@ -1,4 +1,4 @@
-export function ProductSkeleton() {
+﻿export function ProductSkeleton() {
   return (
     <div className="skeleton-card" aria-hidden="true">
       <div className="skeleton-img" />
@@ -8,3 +8,4 @@ export function ProductSkeleton() {
     </div>
   );
 }
+

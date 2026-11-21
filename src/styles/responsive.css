@@ -1,4 +1,4 @@
-@media (max-width: 1100px) {
+﻿@media (max-width: 1100px) {
   .products-grid, .category-grid, .occasion-grid { grid-template-columns: repeat(3, 1fr); }
   .feature-blocks { grid-template-columns: repeat(2, 1fr); }
   .footer-grid { grid-template-columns: repeat(2, 1fr); }
@@ -8,10 +8,17 @@
   :root { --pad-x: 24px; --section-y: 72px; }
   .nav-desktop { display: none; }
   .mobile-toggle { display: inline-grid; }
-  .mobile-menu { display: block; position: absolute; top: 100%; left: 0; width: 100%; background: var(--ivory); border-bottom: 1px solid var(--border-soft); padding: 16px 24px 24px; }
+  .site-top { position: sticky; }
+  .site-top.home.transparent, .site-top.home.solid { position: sticky; }
+  .site-header.transparent { background: rgba(250,247,244,0.98); border-bottom-color: var(--border-soft); }
+  .site-header.transparent .brand, .site-header.transparent .nav-link, .site-header.transparent .icon-btn { color: var(--espresso); }
+  .site-header.transparent .brand small { color: var(--text-muted); }
+  .mobile-menu { display: block; position: absolute; top: 100%; left: 0; width: 100%; background: var(--ivory); border-bottom: 1px solid var(--border-soft); padding: 16px 24px 24px; box-shadow: var(--shadow-card); }
   .mobile-menu nav { display: grid; }
   .mobile-menu .nav-link { padding: 14px 0; border-bottom: 1px solid var(--border-soft); color: var(--espresso); }
   .site-header.transparent .mobile-menu .nav-link { color: var(--espresso); }
+  .hero { padding-top: 0; min-height: 100vh; }
+  .hero-content { padding: 72px 0; }
   .collections-grid { grid-template-columns: 1fr 1fr; }
   .collection-card.large { grid-row: auto; min-height: 360px; }
   .shop-layout { grid-template-columns: 1fr; gap: 24px; }
@@ -21,8 +28,12 @@
 }
 @media (max-width: 768px) {
   :root { --pad-x: 20px; --section-y: 64px; }
-  .hero { min-height: 72vh; }
-  .hero-content { padding: 132px 0 72px; }
+  .header-inner { min-height: 72px; gap: 12px; }
+  .brand { gap: 10px; font-size: 1.35rem; }
+  .brand img { height: 46px; max-width: 132px; }
+  .brand small { font-size: 9px; letter-spacing: 0.12em; }
+  .hero { min-height: 100vh; }
+  .hero-content { padding: 64px 0 72px; }
   .intro-grid, .modal-grid { grid-template-columns: 1fr; }
   .category-grid, .products-grid, .occasion-grid { grid-template-columns: repeat(2, 1fr); gap: 16px; }
   .collections-grid { grid-template-columns: 1fr; }
@@ -34,6 +45,10 @@
   .footer-grid { grid-template-columns: 1fr; gap: 32px; }
 }
 @media (max-width: 480px) {
+  .brand div { font-size: 1.2rem; }
+  .brand small { display: none; }
+  .brand img { height: 42px; max-width: 118px; }
+  .header-actions { gap: 0; }
   .hero-actions, .cta-actions { flex-direction: column; align-items: stretch; }
   .btn { width: 100%; }
   .card-actions { grid-template-columns: 1fr; }
@@ -45,3 +60,4 @@
   .modal-backdrop { padding: 10px; }
   .gallery-thumbs button { width: 52px; height: 64px; }
 }
+

@@ -32,7 +32,10 @@ export default function Home() {
   return (
     <main id="main-content">
       <section className="hero">
-        <img className="hero-bg" src="/images/hero.svg" alt="" fetchPriority="high" width="1600" height="900" />
+        <picture className="hero-media">
+          <source media="(max-width: 768px)" srcSet="/images/hero_image_bg_mobile_view.jpg" />
+          <img src="/images/hero_bg_image.jpeg" alt="" fetchPriority="high" />
+        </picture>
         <div className="container">
           <motion.div className="hero-content" initial="hidden" animate="visible" variants={hv}>
             <span className="eyebrow">Sri Subham Return Gifts</span>

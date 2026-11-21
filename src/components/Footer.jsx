@@ -1,4 +1,4 @@
-import { Link } from 'react-router-dom';
+﻿import { Link } from 'react-router-dom';
 import { Instagram, MessageCircle } from 'lucide-react';
 import { categories } from '../data/catalog';
 import { generalEnquiry, hasWhatsAppNumber } from '../utils/whatsapp';
@@ -11,7 +11,7 @@ export default function Footer() {
         <div className="footer-brand">
           <div className="brand" style={{ color: 'var(--ivory)' }}>
             <img src="/favicon.svg" alt="" width="44" height="44" />
-            <div>Sri Subham <small style={{ color: 'rgba(255,248,238,.72)' }}>Memories that last forever</small></div>
+            <div>Sri Subham <small style={{ color: 'rgba(250,247,244,0.72)' }}>Memories that last forever</small></div>
           </div>
           <p>Thoughtfully curated return gifts for celebrations that deserve something special.</p>
           <div className="socials">
@@ -41,7 +41,8 @@ export default function Footer() {
           </ul>
         </div>
       </div>
-      <div className="container footer-bottom">© {year} Sri Subham Return Gifts. All rights reserved.</div>
+      <div className="container footer-bottom">Â© {year} Sri Subham Return Gifts. All rights reserved.</div>
     </footer>
   );
 }
+

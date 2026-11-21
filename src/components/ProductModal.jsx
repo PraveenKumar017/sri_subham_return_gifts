@@ -1,4 +1,4 @@
-import { useEffect, useRef, useState } from 'react';
+﻿import { useEffect, useRef, useState } from 'react';
 import { ChevronLeft, ChevronRight, X } from 'lucide-react';
 import { formatPrice, availabilityLabel } from '../utils/format';
 import { hasWhatsAppNumber, productEnquiry } from '../utils/whatsapp';
@@ -75,3 +75,4 @@ export default function ProductModal({ product, onClose }) {
     </div>
   );
 }
+

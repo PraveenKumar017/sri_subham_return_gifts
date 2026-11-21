@@ -1,4 +1,4 @@
-import { Link } from 'react-router-dom';
+﻿import { Link } from 'react-router-dom';
 import { ArrowRight } from 'lucide-react';
 
 export default function CategoryCard({ category }) {
@@ -15,3 +15,4 @@ export default function CategoryCard({ category }) {
     </Link>
   );
 }
+

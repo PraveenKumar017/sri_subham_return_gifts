@@ -1,4 +1,4 @@
-export default function SectionHeading({ eyebrow, title, text, center = false, dark = false }) {
+﻿export default function SectionHeading({ eyebrow, title, text, center = false, dark = false }) {
   return (
     <div className={`section-head ${center ? 'center' : ''}`.trim()}>
       {eyebrow && <span className="eyebrow">{eyebrow}</span>}
@@ -8,3 +8,4 @@ export default function SectionHeading({ eyebrow, title, text, center = false, d
     </div>
   );
 }
+
